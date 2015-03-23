@@ -1,6 +1,6 @@
 angular.module('clinicApp')
 
-.directive('mainheader', function(){
+.directive('mainHeader', function(){
 	return {
 		restrict: 'EA',
 		templateUrl: 'partials/header.html',
@@ -48,7 +48,7 @@ angular.module('clinicApp')
 	};
 })
 
-.directive('aydekeBottom', function(){
+.directive('bottom', function(){
 	return {
 		restrict: 'EA',
 		templateUrl: 'partials/bottom.html',
@@ -56,7 +56,7 @@ angular.module('clinicApp')
 	};
 })
 
-.directive('aydekeFooter', function(){
+.directive('mainFooter', function(){
 	return {
 		restrict: 'EA',
 		templateUrl: 'partials/footer.html',

@@ -2,10 +2,10 @@
 <div class="wrap_nav">
 	<nav role="navigation">
 		<ul id="navigation" class="navigation">
-			<li class="menu-item current_page_item">
+			<li class="menu-item" ng-class="{current_page_item:isActive('/')}">
 				<a ui-sref="main"><span>Home</span></a>
 			</li>
-			<li class="menu-item">
+			<li class="menu-item" ng-class="{current_page_item:isActive('/about-us')}">
 				<a ui-sref="about-us"><span>About Us</span></a>
 			</li>
 
@@ -72,7 +72,9 @@
 				</ul>
 			</li> -->
 
-			<li class="menu-item"><a ui-sref="services"><span>Services</span></a></li>
+			<li class="menu-item" ng-class="{current_page_item:isActive('/services')}">
+				<a ui-sref="services"><span>Services</span></a>
+			</li>
 			<!-- <li class="dropdown menu-item menu-item-has-children">
 				<a><span>Services</span></a>
 				<ul class="sub-menu">
@@ -82,10 +84,18 @@
 				</ul>
 			</li> -->
 
-			<li class="menu-item"><a ui-sref="doctors"><span>Doctors</span></a></li>
-			<li class="menu-item"><a ui-sref="appointments"><span>Appointments</span></a></li>
-			<li class="menu-item"><a ui-sref="blog"><span>Blog</span></a></li>
-			<li class="menu-item"><a ui-sref="contacts"><span>Contacts</span></a></li>
+			<li class="menu-item" ng-class="{current_page_item:isActive('/doctors')}">
+				<a ui-sref="doctors"><span>Doctors</span></a>
+			</li>
+			<li class="menu-item" ng-class="{current_page_item:isActive('/appointments')}">
+				<a ui-sref="appointments"><span>Appointments</span></a>
+			</li>
+			<li class="menu-item" ng-class="{current_page_item:isActive('/blog')}">
+				<a ui-sref="blog"><span>Blog</span></a>
+			</li>
+			<li class="menu-item" ng-class="{current_page_item:isActive('/contacts')}">
+				<a ui-sref="contacts"><span>Contacts</span></a>
+			</li>
 		</ul>
 		<div class="cl"></div>
 		<div class="wrap_header_search">
