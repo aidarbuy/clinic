@@ -24,14 +24,6 @@ angular.module('clinicApp')
 	};
 })
 
-.directive('bottomTweets', function(){
-	return {
-		restrict: 'EA',
-		templateUrl: 'partials/bottom-tweets.html',
-		controller: 'BottomTweetsCtrl'
-	};
-})
-
 .directive('topSidebar', function(){
 	return {
 		restrict: 'EA',
@@ -40,11 +32,83 @@ angular.module('clinicApp')
 	};
 })
 
+.directive('services', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/services.html',
+		controller: 'MainCtrl'
+	};
+})
+
+.directive('latestServices', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/latest-services.html',
+		controller: 'MainCtrl'
+	};
+})
+
+.directive('latestNews', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/latest-news.html',
+		controller: 'MainCtrl'
+	};
+})
+
+.directive('testimonials', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/testimonials.html',
+		controller: 'MainCtrl'
+	};
+})
+
+.directive('ourDoctors', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/our-doctors.html',
+		controller: 'MainCtrl'
+	};
+})
+
+.directive('bottomTweets', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/bottom-tweets.html',
+		controller: 'BottomTweetsCtrl'
+	};
+})
+
 .directive('aydekeSidebar', function(){
 	return {
 		restrict: 'EA',
 		templateUrl: 'partials/sidebar.html',
 		controller: 'SidebarCtrl'
+	};
+})
+
+.directive('advantages', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/advantages.html',
+		controller: 'AdvantagesCtrl'
+	};
+})
+
+.directive('download', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/download.html',
+		controller: 'MainCtrl'
+	};
+})
+
+.directive('statistics', function(){
+	return {
+		restrict: 'EA',
+		templateUrl: 'partials/statistics.html',
+		controller: 'MainCtrl'
 	};
 })
 
@@ -61,5 +125,31 @@ angular.module('clinicApp')
 		restrict: 'EA',
 		templateUrl: 'partials/footer.html',
 		controller: 'SettingsCtrl'
+	};
+})
+
+.directive('mySlider', function($document) {
+	return {
+		restrict: 'EA',
+		link: function(scope, element, attr) {
+			function invokeSlider() {
+				jQuery(element)
+				.cmsmsResponsiveContentSlider({
+					sliderWidth: '100%',
+					sliderHeight: 'auto',
+					animationSpeed: 500,
+					animationEffect: 'slide',
+					animationEasing: 'easeInOutExpo',
+					pauseTime: 0,
+					activeSlide: 1,
+					touchControls: false,
+					pauseOnHover: false,
+					arrowNavigation: true,
+					slidesNavigation: false
+				})
+			}
+
+			invokeSlider();
+		}
 	};
 });

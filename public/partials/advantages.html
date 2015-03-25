@@ -1,0 +1,45 @@
+<div class="one_first first_column"><h3>Advantages</h3></div>
+
+<div class="one_first first_column">
+    <div class="tour_content" ng-init="selected = 1">
+        <ul class="tour">
+            <li ng-click="selected = 1" ng-class="{current: selected == 1}"><a href="#"><span>Responsive Theme</span></a></li>
+            <li ng-click="selected = 2" ng-class="{current: selected == 2}"><a href="#"><span>Form Builder Tool</span></a></li>
+            <li ng-click="selected = 3" ng-class="{current: selected == 3}"><a href="#"><span>Many Shortcodes</span></a></li>
+            <li ng-click="selected = 4" ng-class="{current: selected == 4}"><a href="#"><span>WYSIWYG Editor</span></a></li>
+        </ul>
+
+        <div class="tour_box_content">
+
+            <div class="tour_box slide-animation" ng-style="{display:'block'}" ng-show="selected == 1">
+                <div class="tour_box_inner">
+                    <h4><img class="alignleft max_width" alt="stethoscope-on-clipboard-s-1" src="images/stethoscope-on-clipboard-s-1-300x300.jpg" width="150" height="150">Responsive &amp; Retina</h4>
+                    <p>A 100% Responsive, with Retina ready, WordPress theme is guaranteed to have a great appearance on large desktop screens, as well as on mobile devices screens. Despite the screen resolution, all the elements on the web page look neat and clean, convenient to use too.</p>
+                </div>
+            </div>
+
+            <div class="tour_box slide-animation" ng-style="{display:'block'}" ng-show="selected == 2" ng-animate="{enter: 'mycss-animation'}">
+                <div class="tour_box_inner">
+                    <h4 dir="ltr">Easy Form Setup<img class="alignright max_width" alt="chemist-at-work" src="images/chemist-at-work-300x300.jpg" width="150" height="150"></h4>
+                    <p dir="ltr">A powerful Form Builder Tool, customly developed by CMSMasters, lets you create an unlimited amount of forms of different types and complexity, from simple contact forms to complex questionnaires with numerous fields, radio-buttons, checkboxes and dropdowns, text areas, as well as set validation for these fields.</p>
+                </div>
+            </div>
+
+            <div class="tour_box" ng-style="{display:'block'}" ng-show="selected == 3">
+                <div class="tour_box_inner">
+                    <h4 dir="ltr"><img class="alignleft max_width" alt="doctor-at-the-gym-s" src="images/doctor-at-the-gym-s-300x300.jpg" width="150" height="150">Extended Shortcodes Pack</h4>
+                    <p dir="ltr">Cmsmasters' custom WordPress theme admin panel includes a Super Extended Shortcodes pack for sophisticated content formatting and improved presentation. The widest collection of useful widgets allow you to improve your website’s interaction with visitors, bringing its functionality to a new level.</p>
+                </div>
+            </div>
+
+            <div class="tour_box" ng-style="{display:'block'}" ng-show="selected == 4">
+                <div class="tour_box_inner">
+                    <h4>WYSIWYG Customization<img class="alignright max_width" alt="happy-baby-s" src="images/happy-baby-s-300x300.jpg" width="150" height="150"></h4>
+                    <p>You can drag’n’drop content parts across through the website page with a handy WYSIWYG Content Composer, as well as easily edit their appearance, insert featured blocks, sliders, tables, various media etc. with one click. Create your custom pre-saved layout templates to use them over and over again. It is intuitive to use even for an amateur.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="cl"></div>
+    </div>
+</div>

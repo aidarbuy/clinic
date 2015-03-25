@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="stylesheet" href="css/animations.css"> -->
+    <!-- <link rel="stylesheet" href="bowerlibs/matter.css"> -->
+</head>
+<body>
+    <!-- <h1 class="slide-animation">Example</h1> -->
+    <script type="text/javascript" src="bowerlibs/matter-js/build/matter.min.js"></script>
+    <script>
+        // Matter.js module aliases
+        var Engine = Matter.Engine,
+        World = Matter.World,
+        Bodies = Matter.Bodies;
+
+        // create a Matter.js engine
+        var engine = Engine.create(document.body);
+
+        // create two boxes and a ground
+        var boxA = Bodies.rectangle(400, 200, 80, 80);
+        var boxB = Bodies.rectangle(450, 50, 80, 80);
+        var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+
+        // add all of the bodies to the world
+        World.add(engine.world, [boxA, boxB, ground]);
+
+        // run the engine
+        Engine.run(engine);
+    </script>
+    <!-- // <script type="text/javascript" src="bowerlibs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    // <script type="text/javascript" src="bowerlibs/angular-animate/angular-animate.min.js"></script> -->
+</body>
+</html>

@@ -4,6 +4,10 @@ angular.module('clinicApp')
 	$scope.testMessage = "Hi from main controller!";
 })
 
+.controller('BlogCtrl', function($scope){
+	$scope.testMessage = "Hi from blog controller!";
+})
+
 .controller('HeaderCtrl', function($scope){
 	$scope.testMessage = "Hi from header controller!";
 })
@@ -13,6 +17,16 @@ angular.module('clinicApp')
 })
 
 .controller('NavigationCtrl', function($scope, $location) {
+	$scope.isActive = function(path){ return path === $location.path() };
+})
+
+.controller('AdvantagesCtrl', function($scope) {
+	$scope.showCurrent = function(selected) {
+		if (selected == 1) {
+			$scope.showStyle = { display: 'none' };
+		}
+	};
+
 	$scope.isActive = function(path){ return path === $location.path() };
 })
 
@@ -32,10 +46,6 @@ angular.module('clinicApp')
 	$scope.testMessage = "Hi from footer controller!";
 })
 
-.controller('ContactsCtrl', function($scope){
-	$scope.testMessage = "Hi from contacts controller!";
-})
-
 .controller('SidebarCtrl', function($scope){
 	$scope.testMessage = "Hi from sidebar controller!";
 })
@@ -48,14 +58,69 @@ angular.module('clinicApp')
 	$scope.testMessage = "Hi from services controller!";
 })
 
+.controller('ContactsCtrl', function($scope, $log, $timeout){
+	// $scope.map = {center: {latitude: 40.1451, longitude: -99.6680 }, zoom: 4 };
+	$scope.map = {center: {latitude: 39.11682, longitude: -77.53967 }, zoom: 12 };
+	$scope.options = {scrollwheel: false};
+	// $scope.coordsUpdates = 0;
+	// $scope.dynamicMoveCtr = 0;
+	$scope.marker = {
+		id: 0,
+		coords: {
+			latitude: 39.11682,
+			longitude: -77.53967
+		}
+		// options: { draggable: true },
+		// events: {
+		// 	dragend: function (marker, eventName, args) {
+		// 		$log.log('marker dragend');
+		// 		var lat = marker.getPosition().lat();
+		// 		var lon = marker.getPosition().lng();
+		// 		$log.log(lat);
+		// 		$log.log(lon);
+
+		// 		$scope.marker.options = {
+		// 			draggable: true,
+		// 			labelContent: "lat: " + $scope.marker.coords.latitude + ' ' + 'lon: ' + $scope.marker.coords.longitude,
+		// 			labelAnchor: "100 0",
+		// 			labelClass: "marker-labels"
+		// 		};
+		// 	}
+		// }
+	};
+	// $scope.$watchCollection("marker.coords", function (newVal, oldVal) {
+	// 	if (_.isEqual(newVal, oldVal))
+	// 		return;
+	// 	$scope.coordsUpdates++;
+	// });
+	// $timeout(function () {
+	// 	$scope.marker.coords = {
+	// 		latitude: 42.1451,
+	// 		longitude: -100.6680
+	// 	};
+	// 	$scope.dynamicMoveCtr++;
+	// 	$timeout(function () {
+	// 		$scope.marker.coords = {
+	// 			latitude: 43.1451,
+	// 			longitude: -102.6680
+	// 		};
+	// 		$scope.dynamicMoveCtr++;
+	// 	}, 2000);
+	// }, 1000);
+})
+
 .controller('SettingsCtrl', function($scope){
-	$scope.testMessage = "Hi from settings controller!";
+	$scope.testMessage = "==> Test message from settings controller. <==";
+
 	$scope.clinic = {
-		name: "Nexemed",
-		phone: "(703) 687 41 58",
-		email: "info@nexemed.com",
+		domain: "leesburguc.com",
+		name: "Leesburg Urgent Care",
+		phone: "(703) 687-4158",
 		address: "952 Edwards Ferry Road NE",
 		city: "Leesburg",
+		zip: 20176,
 		state: "VA"
 	};
+
+	$scope.clinic.email = "info@" + $scope.clinic.domain;
 });
