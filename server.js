@@ -8,7 +8,7 @@ eapp.use(express.static(__dirname + '/public'))
 		// vozvrat.send("Hi from server!");
 	});
 
-var server = eapp.listen(process.env.PORT || 9000, process.env.IP || '127.0.0.1', function(){
+var server = eapp.listen(process.env.PORT || 9000, function(){
 	var host = server.address().address,
 		port = server.address().port,
 		protocol = server.address().family;
