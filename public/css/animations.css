@@ -25,7 +25,7 @@
 }
  
 .slide-animation.ng-leave.ng-leave-active {
-  left:-100px;
+  left:0px;
   opacity:0;
 }
  

@@ -3,11 +3,7 @@
 	<div class="header_inner">
 		<div class="custom_header">
 			<div class="header_html">
-				<span class="contact_widget_phone">
-<!--					Contact us:-->
-					<span></span>
-					{{ clinic.phone }}
-				</span>
+				<span class="contact_widget_phone"><!-- Contact us: --><span></span>{{ clinic.phone }}</span>
 				<span class="contact_widget_email">
 					<span></span>
 					<a href="mailto:{{ clinic.email }}">{{ clinic.email }}</a>
@@ -22,13 +18,11 @@
 					<li><a target="_blank" href="#" title="#"><img src="images/img/skype.png" alt="#" /></a></li>
 				</ul>
 				<div class="cl"></div>
-				<a href="#" class="social_toggle">
-					<span></span>
-				</a>
+				<a href="#" class="social_toggle"><span></span></a>
 			</div>
 		</div>
-		<a href="index.html" title="Nexemed" class="logo">
-			<img src="images/logo-jpeg.jpg" alt="Nexemed" />
+		<a ui-sref="main" title="{{ clinic.name }}" class="logo">
+			<img src="images/logo-jpeg.jpg" alt="{{ clinic.name }}" />
 		</a>
 		<a class="responsive_nav" href="javascript:void(0);">
 			<span></span>
