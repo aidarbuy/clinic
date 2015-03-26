@@ -80,7 +80,7 @@ angular.module('clinicApp')
 	};
 })
 
-.directive('aydekeSidebar', function(){
+.directive('sidebar', function(){
 	return {
 		restrict: 'EA',
 		templateUrl: 'partials/sidebar.html',
