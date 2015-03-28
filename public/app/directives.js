@@ -2,7 +2,6 @@ angular.module('clinicApp')
 
 .directive('mainHeader', function(){
 	return {
-		// replace: true,
 		restrict: 'EA',
 		templateUrl: 'partials/header.html',
 		controller: 'HeaderCtrl'
@@ -69,7 +68,7 @@ angular.module('clinicApp')
 	return {
 		restrict: 'EA',
 		templateUrl: 'partials/our-doctors.html',
-		controller: 'MainCtrl'
+		controller: 'DoctorsCtrl'
 	};
 })
 

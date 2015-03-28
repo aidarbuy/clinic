@@ -52,6 +52,37 @@ angular.module('clinicApp')
 
 .controller('DoctorsCtrl', function($scope){
 	$scope.testMessage = "Hi from doctors controller!";
+
+	$scope.doctors = [
+		{
+			title: "Dr.",
+			firstname: "Roshelle",
+			lastname: "Beckwith",
+			speciality: "Emergency Medicine",
+			imageUrl: "images/doctors/roshelle-beckwith-2.jpg"
+		},
+		{
+			title: "Dr.",
+			firstname: "Matthew",
+			lastname: "Beckwith",
+			speciality: "Family Medicine",
+			imageUrl: "images/doctors/matthew-beckwith.jpg"
+		},
+		{
+			title: "Dr.",
+			firstname: "Rosanna",
+			lastname: "Pau",
+			speciality: "Emergency Medicine",
+			imageUrl: "images/doctors/rosanna-pau.jpg"
+		},
+		{
+			title: "Dr.",
+			firstname: "Brian",
+			lastname: "Rader",
+			speciality: "Emergency Medicine",
+			imageUrl: "images/male-doctor-440x440.jpg"
+		}
+	];
 })
 
 .controller('ServicesCtrl', function($scope){
