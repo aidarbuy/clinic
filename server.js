@@ -41,7 +41,7 @@ eapp.get('/api/doctors', function(req, res) {
 		});
 	})
 	.get('*', function(req, res) {
-		 return res.sendFile(__dirname + '/helloworld.html');
+		 return res.sendFile(__dirname + '/index.html');
 	});
 
 // Server
