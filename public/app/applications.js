@@ -1,4 +1,4 @@
-angular.module('clinicApp', ['ui.router', 'ngAnimate', 'uiGmapgoogle-maps'])
+angular.module('clinicApp', ['ui.router', 'ngResource', 'ngAnimate', 'uiGmapgoogle-maps'])
 
 .config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 	$locationProvider.html5Mode(true);

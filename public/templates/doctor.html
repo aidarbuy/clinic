@@ -2,12 +2,12 @@
 <section id="middle" class="services_page">
 
 	<div class="headline">
-		<h1>Dr. Roshelle Beckwith</h1>
+		<h1>{{ doctor.firstname + " " + doctor.lastname }}</h1>
 	</div>
 	<div class="cmsms_breadcrumbs">
 		<a ui-sref="main" class="cms_home">Home</a>
 		<span class="breadcrumbs_sep">/</span>
-		<span>Dr. Roshelle Beckwith</span>
+		<span>{{ doctor.firstname + " " + doctor.lastname }}</span>
 	</div>
 	<div class="content_wrap  service_page">
 
@@ -21,8 +21,8 @@
 						<div class="service_content with_s_side_bar">
 							<div class="resize">
 								<figure>
-									<a href="images/doctors/roshelle-beckwith.jpg" data-group="img_5906" title="Dr. Michael Linden" class="preloade highImg jackbox">
-										<img width="820" height="465" src="images/doctors/roshelle-beckwith.jpg" class="fullwidth" alt="Dr. Roshelle Beckwith" title="Dr. Roshelle Beckwith" />
+									<a href="{{ doctor.imageUrl }}" data-group="img_5906" title="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" class="preloade highImg jackbox">
+										<img width="820" height="465" src="{{ doctor.imageUrl }}" class="fullwidth" alt="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" title="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" />
 									</a>
 								</figure>
 								<div class="cl"></div>
@@ -40,12 +40,8 @@
 										<!-- Lorem ipsum dolor sit amet, cnsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
 										<!-- Doctor Beckwith worked as an emergency room physician since 2008, and as such she is acustomed to see very sick people and children -->
 										<h4>
-											<!-- <p>Doctor Beckwith has graduated from University of Vermont College of Medicine in 2005, she finished her residency training in emergency medicine from Johns Hopkins University School of Medicine in 2008. She has worked as an emergency room physician in Frederick Memorial Hospital until 2013. Currently, in addition to Leesburg Urgent Care, she works as a special operations emergency room physician for Team Health.</p> -->
-											<p>Hi, I'm doctor Beckwith!</p>
-												<p>I graduated from University of Vermont College of Medicine in 2005,
-												then I finished my residency training in emergency medicine from Johns Hopkins University School of Medicine in 2008.
-												I worked as an emergency room physician in Frederick Memorial Hospital until 2013.
-												Currently, in addition to working in Leesburg Urgent Care, I also work as a special operations emergency room physician for Team Health.</p>
+											<p>Hi, I'm doctor {{ doctor.lastname }}!</p>
+											<p>{{ doctor.description }}</p>
 										</h4>
 									</div>
 									<div class="one_first first_column">
@@ -132,7 +128,7 @@
 												</div>
 
 												<div class="form_info cmsms_input">
-													<label for="name_test_contact_form_760373284202473500_71395285589975210">Yout Phone</label>
+													<label for="name_test_contact_form_760373284202473500_71395285589975210">Your Phone</label>
 													<div class="form_field_wrap">
 														<input type="text" name="name_test_contact_form_760373284202473500_71395285589975210" id="name_test_contact_form_760373284202473500_71395285589975210" value="" />
 													</div>
@@ -166,16 +162,15 @@
 								<h3>Information</h3>
 								<div class="cmsms_features_item">
 									<span class="cmsms_features_item_title">Speciality</span>
-									<span class="cmsms_features_item_desc">Emergency Medicine</span>
+									<span class="cmsms_features_item_desc">{{ doctor.speciality }}</span>
 								</div>
 								<div class="cmsms_features_item">
 									<span class="cmsms_features_item_title">Title</span>
-									<span class="cmsms_features_item_desc">Doctor of Medicine</span>
+									<span class="cmsms_features_item_desc">{{ doctor.degree }}</span>
 								</div>
 								<div class="cmsms_features_item">
 									<span class="cmsms_features_item_title">Education</span>
-									<span class="cmsms_features_item_desc">UVM College of Medicine</span>
-									<span class="cmsms_features_item_desc">Johns Hopkins School of Medicine</span>
+									<span class="cmsms_features_item_desc">{{ doctor.educaton }}</span>
 								</div>
 								<div class="cmsms_features_item">
 									<span class="cmsms_features_item_title">Phone</span>
@@ -183,7 +178,7 @@
 								</div>
 								<div class="cmsms_features_item">
 									<span class="cmsms_features_item_title">Email</span>
-									<span class="cmsms_features_item_desc">rbeckwith@leesburguc.com</span>
+									<span class="cmsms_features_item_desc">{{ doctor.email }}</span>
 								</div>
 							</div>
 							<div class="cmsms_features">

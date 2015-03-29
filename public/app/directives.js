@@ -75,6 +75,7 @@ angular.module('clinicApp')
 .directive('bottomTweets', function(){
 	return {
 		restrict: 'EA',
+		// transclude: true,
 		templateUrl: 'partials/bottom-tweets.html',
 		controller: 'BottomTweetsCtrl'
 	};

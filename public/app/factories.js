@@ -2,6 +2,6 @@
 
 angular.module('clinicApp')
 
-.factory('TestFactory', function () {
-	return "Hi from test factory";
+.factory('Doctor', function ($resource) {
+	return $resource('/api/doctors/:id');
 });

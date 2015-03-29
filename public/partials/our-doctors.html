@@ -1,13 +1,12 @@
-<div class="one_first first_column"><h3>Our Doctors</h3></div>
-<div class="one_fourth" ng-repeat="doctor in doctors">
+<div class="one_fourth" ng-repeat="doctor in doctors | orderBy: 'id'">
 	<div class="cmsms_our_team_wrap">
 		<div class="cmsms_our_team">
 			<div class="wrap_person">
 				<figure>
-					<img width="440" height="440" src="{{ doctor.imageUrl }}" class="fullwidth" alt="{{ doctor.firstname }} {{ doctor.lastname }}" />
+					<img width="440" height="440" src="{{ doctor.imageUrl }}" class="fullwidth" alt="{{ doctor.firstname + " " doctor.lastname }}" />
 				</figure>
 				<div class="cmsms_team_rollover glow_blue">
-					<a ui-sref="doctor" class="cmsms_link">
+					<a ui-sref="doctor({ doctorId: doctor.id })" class="cmsms_link">
 						<span></span>
 					</a>
 				</div>
@@ -15,7 +14,7 @@
 			<header class="entry-header">
 				<div>
 					<h6 class="person_title">
-						<a ui-sref="doctor">{{ doctor.firstname + " " + doctor.lastname }}</a>
+						<a ui-sref="doctor({ doctorId: doctor.id })">{{ doctor.firstname + " " + doctor.lastname }}</a>
 					</h6>
 					<p class="person_subtitle">{{ doctor.speciality }}</p>
 				</div>
