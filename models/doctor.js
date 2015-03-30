@@ -8,8 +8,10 @@ var doctorSchema = mongoose.Schema({
 	speciality: String,
 	degree: String,
 	education: String,
-	imageUrl: String,
-	description: String
+	imageSmall: String,
+	imageLarge: String,
+	description: String,
+	email: String
 });
 
 module.exports = mongoose.model('Doctor', doctorSchema);

@@ -9,7 +9,7 @@
 		<span class="breadcrumbs_sep">/</span>
 		<span>{{ doctor.firstname + " " + doctor.lastname }}</span>
 	</div>
-	<div class="content_wrap  service_page">
+	<div class="content_wrap service_page">
 
 		<!--_________________________ Start Content _________________________ -->
 		<section id="middle_content" role="main">
@@ -21,8 +21,8 @@
 						<div class="service_content with_s_side_bar">
 							<div class="resize">
 								<figure>
-									<a href="{{ doctor.imageUrl }}" data-group="img_5906" title="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" class="preloade highImg jackbox">
-										<img width="820" height="465" src="{{ doctor.imageUrl }}" class="fullwidth" alt="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" title="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" />
+									<a href="{{ doctor.imageLarge }}" data-group="img_5906" title="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" class="preloade highImg jackbox">
+										<img width="820" height="465" src="{{ doctor.imageLarge }}" class="fullwidth" alt="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" title="{{ doctor.title + " " + doctor.firstname + " " + doctor.lastname }}" />
 									</a>
 								</figure>
 								<div class="cl"></div>
@@ -170,7 +170,7 @@
 								</div>
 								<div class="cmsms_features_item">
 									<span class="cmsms_features_item_title">Education</span>
-									<span class="cmsms_features_item_desc">{{ doctor.educaton }}</span>
+									<span class="cmsms_features_item_desc">{{ doctor.education }}</span>
 								</div>
 								<div class="cmsms_features_item">
 									<span class="cmsms_features_item_title">Phone</span>
