@@ -493,7 +493,7 @@ h3:after,
 .wrap_social_icons ul li a {display:block;}
 
 .social_toggle {
-	display:none;
+	display:inline;
 	position:relative;
 	bottom:0;
 	left:50%;
