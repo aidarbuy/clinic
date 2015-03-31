@@ -40,9 +40,9 @@ eapp.get('/api/doctors', function(req, res) {
 			return res.json(data);
 		});
 	})
-	.get('*', function(req, res) {
-		 return res.sendFile(__dirname + '/index.html');
-	});
+//	.get('*', function(req, res) {
+//		 return res.sendFile(__dirname + '/index.html');
+//	});
 
 // Server
 server = eapp.listen(process.env.PORT || 9000, function() {
