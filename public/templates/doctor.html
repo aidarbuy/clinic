@@ -2,12 +2,12 @@
 <section id="middle" class="services_page">
 
 	<div class="headline">
-		<h1>{{ doctor.firstname + " " + doctor.lastname }}</h1>
+		<h1>{{ doctor.firstname + " " + doctor.lastname + ", " + doctor.title }}</h1>
 	</div>
 	<div class="cmsms_breadcrumbs">
 		<a ui-sref="main" class="cms_home">Home</a>
 		<span class="breadcrumbs_sep">/</span>
-		<span>{{ doctor.firstname + " " + doctor.lastname }}</span>
+		<span>{{ doctor.firstname + " " + doctor.lastname + ", " + doctor.title }}</span>
 	</div>
 	<div class="content_wrap service_page">
 

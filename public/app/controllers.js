@@ -51,8 +51,8 @@ angular.module('clinicApp')
 
 .controller('SettingsCtrl', function($scope){
 	$scope.clinic = {
-		domain: "leesburguc.com",
-		name: "Leesburg Urgent Care",
+		domain: "metromeduc.com",
+		name: "MetroMed Urgent Care",
 		phone: "(703) 687-4158",
 		address: "952 Edwards Ferry Road NE",
 		city: "Leesburg",

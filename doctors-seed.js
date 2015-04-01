@@ -1,7 +1,7 @@
 module.exports = [
 	{
 		id: 1,
-		title: "Dr.",
+		title: "MD, FACEP, FAAEM",
 		firstname: "Roshelle",
 		lastname: "Beckwith",
 		speciality: "Emergency Medicine",
@@ -15,12 +15,12 @@ module.exports = [
 	},
 	{
 		id: 2,
-		title: "Dr.",
+		title: "MD",
 		firstname: "Matthew",
 		lastname: "Beckwith",
 		speciality: "Family Medicine",
 		degree: "Doctor of Medicine",
-		education: "University of Texas School of Medicine",
+		education: "University of Texas School of Medicine, North Texas State University",
 		imageSmall: "images/doctors/matthew-440x440.jpg",
 		imageLarge: "images/doctors/matthew-820x465.jpg",
 		description: "I graduated from University of Texas School of Medicine in 1995. I finished my residency training in family medicine from University of Florida n 1998. I have been working as a family doctor in Robinwood Medical Center since then. I provide primary care services.",
@@ -28,7 +28,7 @@ module.exports = [
 	},
 	{
 		id: 3,
-		title: "Dr.",
+		title: "MD",
 		firstname: "Rosanna",
 		lastname: "Pau",
 		speciality: "Emergency Medicine",
