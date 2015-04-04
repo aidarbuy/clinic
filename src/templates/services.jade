@@ -1,0 +1,253 @@
+// _________________________ Start Middle _________________________
+section#middle.services_page
+
+	.headline
+		h1 Services
+
+	.cmsms_breadcrumbs
+		a.cms_home(ui-sref="main") Home
+		span.breadcrumbs_sep &nbsp;/&nbsp;
+		span Services
+
+	.s_sort_block
+		.s_options_loade
+		.s_options_block
+			.s_sort
+				a.button_small(name="s_name" title="Name" href="#")
+					span Name
+
+			.s_filter
+				.s_filter_container
+					.s_cat_filter.button_small(data-filter="article.service" title="All Categories" href="#")
+						span All Categories
+
+					ul.s_filter_list
+						li.current
+							a.current(data-filter="article.service" title="All Categories" href="#") All Categories
+						li
+							a(href="#" data-filter="article.service[data-category~='diagnosis']" title="Diagnosis") Diagnosis
+						li
+							a(href="#" data-filter="article.service[data-category~='pediatric']" title="Pediatric") Pediatric
+						li
+							a(href="#" data-filter="article.service[data-category~='pharmacy']" title="Pharmacy") Pharmacy
+						li
+							a(href="#" data-filter="article.service[data-category~='therapy']" title="Therapy") Therapy
+						li
+							a(href="#" data-filter="article.service[data-category~='%d1%81ardiologist']" title="Сardiologist") Сardiologist
+
+			.cl
+
+	.content_wrap.fullwidth
+		// _________________________ Start Content _________________________
+		section#middle_content(role="main")
+			.entry-summary
+				section.services.four_columns
+					// _________________________ Start Slider Service _________________________
+					article.service.type-service.status-publish.hentry.format-slider(data-category="pediatric therapy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a.preloade(href="diagnosis_clinic.html" title="Pediatric Clinic")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/happy-baby-s-440x440.jpg" alt="Pediatric Clinic" title="Pediatric Clinic")
+
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Pediatric
+
+								footer.entry-meta
+									span.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Pediatric,
+										a(href="diagnosis_clinic.html" rel="tag") Therapy
+
+									span.meta-date 20140112155935
+
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					// _________________________ Finish Slider Service _________________________
+
+					// _________________________ Start Album Service _________________________
+					article.service.type-service.status-publish.hentry.format-album(data-category="therapy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a.preloade(href="diagnosis_clinic.html" title="Gynecological Clinic")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/ultrasound-s-440x440.jpg" alt="Gynecological Clinic" title="Gynecological Clinic")
+
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Gynecological
+
+								footer.entry-meta
+									span.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Therapy
+
+									span.meta-date 20140111155710
+
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					// _________________________ Finish Album Service _________________________
+
+					// _________________________ Start Album Service _________________________
+					article.service.type-service.status-publish.hentry.format-album(data-category="diagnosis pharmacy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a.preloade(href="diagnosis_clinic.html" title="Laboratory Analysis")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/biochemical-research-s-440x440.jpg" alt="Laboratory Analysis" title="Laboratory Analysis")
+
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Laboratory Analysis
+
+								footer.entry-meta
+									span.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Diagnosis,
+										a(href="diagnosis_clinic.html" rel="tag") Pharmacy
+
+									span.meta-date 20140110091119
+
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					// _________________________ Finish Album Service _________________________
+
+					// _________________________ Start Slider Service _________________________
+					article.service.type-service.status-publish.hentry.format-slider(data-category="diagnosis therapy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a.preloade(href="diagnosis_clinic.html" title="Cardiac Clinic")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/consultation-s-1-440x440.jpg" alt="Cardiac Clinic" title="Cardiac Clinic")
+
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Cardiac
+
+								footer.entry-meta
+									span.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Diagnosis,
+										a(href="diagnosis_clinic.html" rel="tag") Therapy
+
+									span.meta-date 20140109154812
+
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					// _________________________ Finish Slider Service _________________________
+
+					// _________________________ Start Album Service _________________________
+					article.service.type-service.status-publish.hentry.format-album(data-category="diagnosis therapy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a(href="diagnosis_clinic.html" title="Diagnosis Clinic")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/stethoscope-on-clipboard-s-440x440.jpg" alt="Diagnosis Clinic" title="Diagnosis Clinic")
+
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Diagnosis
+								footer.entry-meta
+									span.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Diagnosis,
+										a(href="diagnosis_clinic.html" rel="tag") Therapy
+									span.meta-date 20140108154901
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					// _________________________ Finish Album Service _________________________
+
+					// _________________________ Start Video Service _________________________
+					article.service.type-service.status-publish.hentry.format-video(data-category="diagnosis therapy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a.preloade(href="diagnosis_clinic.html" title="Rehabilitation Therapy")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/male-doctor-440x440.jpg" alt="Rehabilitation Therapy" title="Rehabilitation Therapy")
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Rehabilitation Therapy
+								footer.entry-meta
+									.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Diagnosis,
+										a(href="diagnosis_clinic.html" rel="tag") Therapy
+
+									span.meta-date 20140107161132
+
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					// _________________________ Finish Video Service _________________________
+
+					// _________________________ Start Video Service _________________________
+					article.service.type-service.status-publish.hentry.format-video(data-category="therapy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a.preloade(href="diagnosis_clinic.html" title="Medical Counseling")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/Young-attractive-man-440x440.jpg" alt="Medical Counseling" title="Medical Counseling")
+
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Medical Counseling
+								footer.entry-meta
+									span.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Therapy
+
+									span.meta-date 20140106090129
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					// _________________________ Finish Video Service _________________________
+
+					// _________________________ Start Album Service _________________________
+					article.service.type-service.status-publish.hentry.format-album(data-category="diagnosis therapy")
+						.services_inner
+							a(href="diagnosis_clinic.html")
+							.media_box
+								figure
+									a.preloade(href="diagnosis_clinic.html" title="Psychological Counseling")
+										img.fullwidth.wp-post-image(width="440" height="440" src="images/personal-counselor-s-440x440.jpg" alt="Psychological Counseling" title="Psychological Counseling")
+							.service_rollover
+								header.entry-header
+									h5.entry-title
+										a(href="diagnosis_clinic.html") Psychological Counseling
+								footer.entry-meta
+									span.cmsms_category
+										a(href="diagnosis_clinic.html" rel="tag") Diagnosis,
+										a(href="diagnosis_clinic.html" rel="tag") Therapy
+
+									span.meta-date 20140105165948
+
+								.entry-content
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					// _________________________ Finish Album Service _________________________
+
+				ul.page-numbers
+					li
+						span.page-numbers.current 1
+					li
+						a.page-numbers(href='service_four_2.html') 2
+					li
+						a.next.page-numbers(href="service_four_2.html") &gt;
+			.entry
+				.cmsms_cc
+		// _________________________ Finish Content _________________________
+
+		.cl
+// _________________________ Finish Middle _________________________

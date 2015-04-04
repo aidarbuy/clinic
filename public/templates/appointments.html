@@ -1,177 +1,36 @@
-<!-- _________________________ Start Middle _________________________ -->
-<section id="middle">
-	<div class="headline">
-	<h1>Appointments</h1>
-	</div>
-	<div class="cmsms_breadcrumbs">
-		<a href="index.html" class="cms_home">Home</a>
-		<span class="breadcrumbs_sep"> / </span>
-		<span>Appointments</span>
-	</div>
-	<div class="content_wrap r_sidebar">
-
-		<!--_________________________ Start Content _________________________ -->
-		<section id="content" role="main">
-			<div class="entry">
-				<div class="cmsms_cc">
-					<div class="one_first first_column">
-						<div class="cmsms-form-builder">
-							<aside class="box success_box" style="display:none;">
-								<div>
-									<div></div>
-									<div>
-										<p>
-											Thank You!
-											<br />
-											Your message has been sent successfully.
-										</p>
-									</div>
-								</div>
-							</aside>
-							<script type="text/javascript">
-								jQuery(document).ready(function () {
-									jQuery('#form_appointments_803620507476562800').validationEngine('init');
-									jQuery('#form_appointments_803620507476562800 a#appointments_803620507476562800_formsend').click(function () {
-										jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 1 } , 250);
-										if (jQuery('#form_appointments_803620507476562800').validationEngine('validate')) {
-											jQuery.post('php/sendmail.php', {
-												field_572675772111505200 : jQuery('#field_572675772111505200').val(),
-												field_949145697999680900 : jQuery('#field_949145697999680900').val(),
-												name_appointments_803620507476562800_779260444482677900 : jQuery('#name_appointments_803620507476562800_779260444482677900').val(),
-												field_427831627913537800 : jQuery('#field_427831627913537800').val(),
-												field_609916403233180000 : jQuery('#field_609916403233180000').val(),
-												field_241431204693567600 : jQuery('#field_241431204693567600').val(),
-												field_200661433365438530 : jQuery('#field_200661433365438530').val(),
-												field_947959406495958000 : jQuery('input[name=\'field_947959406495958000\']:checked').val(),
-												field_674772244166279300 : jQuery('#field_674772244166279300').val(),
-												contactemail : 'YXBwb2ludG1lbnRzXzgwMzYyMDUwNzQ3NjU2MjgwMHx0ZXN0QHRlc3QuY29tfGFwcG9pbnRtZW50c184MDM2MjA1MDc0NzY1NjI4MDA=',
-												formname : 'appointments_803620507476562800'
-											}, function (data) {
-												jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 0 } , 250);
-												jQuery('#form_appointments_803620507476562800').fadeOut('slow');
-												document.getElementById('form_appointments_803620507476562800').reset();
-												jQuery('#form_appointments_803620507476562800').parent().find('.box').hide();
-												jQuery('#form_appointments_803620507476562800').parent().find('.success_box').fadeIn('fast');
-												jQuery('html, body').animate( { scrollTop : jQuery('#form_appointments_803620507476562800').offset().top - 140 } , 'slow');
-												jQuery('#form_appointments_803620507476562800').parent().find('.success_box').delay(5000).fadeOut(1000, function () {
-													jQuery('#form_appointments_803620507476562800').fadeIn('slow');
-												} );
-											} );
-											return false;
-										} else {
-											jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 0 } , 250);
-											return false;
-										}
-									} );
-								} );
-							</script>
-							<form action="#" method="post" id="form_appointments_803620507476562800">
-
-								<div class="form_info cmsms_select">
-									<label>Select Department</label>
-									<div class="form_field_wrap">
-										<select name="field_572675772111505200" id="field_572675772111505200">
-											<option value="Pediatric Clinic">Pediatric Clinic</option>
-											<option value="Diagnosis Clinic">Diagnosis Clinic</option>
-											<option value="Cardiac Clinic">Cardiac Clinic</option>
-											<option value="Medical Pharmacy">Medical Pharmacy</option>
-											<option value="Family Doctor">Family Doctor</option>
-											<option value="Rehabilitation Therapy">Rehabilitation Therapy</option>
-											<option value="Laryngological Clinic">Laryngological Clinic</option>
-										</select>
-									</div>
-									<div class="cl"></div>
-								</div>
-
-								<div class="form_info cmsms_input">
-									<label for="field_949145697999680900">First Name</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_949145697999680900" id="field_949145697999680900" value="" />
-									</div>
-								</div>
-
-								<div class="form_info cmsms_input">
-									<label for="name_appointments_803620507476562800_779260444482677900">Last Name</label>
-									<div class="form_field_wrap">
-										<input type="text" name="name_appointments_803620507476562800_779260444482677900" id="name_appointments_803620507476562800_779260444482677900" value="" />
-									</div>
-								</div>
-
-								<div class="form_info cmsms_input">
-									<label for="field_427831627913537800">Your Phone</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_427831627913537800" id="field_427831627913537800" value="" />
-									</div>
-								</div>
-
-								<div class="form_info cmsms_input">
-									<label for="field_609916403233180000">Your Email</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_609916403233180000" id="field_609916403233180000" value="" />
-									</div>
-								</div>
-
-								<div class="form_info cmsms_input">
-									<label for="field_241431204693567600">Appointment Date</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_241431204693567600" id="field_241431204693567600" value="" />
-									</div>
-								</div>
-
-								<div class="form_info cmsms_input">
-									<label for="field_200661433365438530">Date of Birth</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_200661433365438530" id="field_200661433365438530" value="" />
-									</div>
-								</div>
-
-								<div class="form_info cmsms_radio">
-									<label>Sex</label>
-									<div class="check_parent">
-										<input type="radio" name="field_947959406495958000" id="field_9479594064959580001" value="Male" checked="checked" />
-										<label for="field_9479594064959580001">Male</label>
-									</div>
-									<div class="cl"></div>
-									<div class="check_parent">
-										<input type="radio" name="field_947959406495958000" id="field_9479594064959580002" value="Female" />
-										<label for="field_9479594064959580002">Female</label>
-									</div>
-									<div class="cl"></div>
-									<div class="check_parent">
-										<input type="radio" name="field_947959406495958000" id="field_9479594064959580003" value="Child" />
-										<label for="field_9479594064959580003">Child</label>
-									</div>
-									<div class="cl"></div>
-								</div>
-								<div class="cl"></div>
-
-								<div class="cl"></div>
-								<div class="form_info cmsms_textarea">
-									<label for="field_674772244166279300">Your Message</label>
-									<div class="form_field_wrap">
-										<textarea name="field_674772244166279300" id="field_674772244166279300" cols="58" rows="6"></textarea>
-									</div>
-								</div>
-								<div class="cl"></div>
-
-								<div class="loading"></div>
-								<div class="cl"></div>
-								<div class="fl">
-									<a id="appointments_803620507476562800_formsend" class="button_small" href="#">Send Message</a>
-								</div>
-								<div class="cl"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- _________________________ Finish Content _________________________ -->
-
-		<!-- _________________________ Start Sidebar _________________________ -->
-		<aydeke-sidebar></aydeke-sidebar>
-		<!-- _________________________ Finish Sidebar _________________________ -->
-		<div class="cl"></div>
-	</div>
-</section>
-<!-- _________________________ Finish Middle _________________________ -->
+<!-- _________________________ Start Middle _________________________--><section id="middle"><div class="headline"></div><h1>Appointments</h1><div class="cmsms_breadcrumbs"><a href="index.html" class="cms_home">Home</a><span class="breadcrumbs_sep">&nbsp;/&nbsp;</span><span>Appointments</span></div><div class="content_wrap r_sidebar"><!-- _________________________ Start Content _________________________--><section id="content" role="main"><div class="entry"><div class="cmsms_cc"><div class="one_first first_column"><div class="cmsms-form-builder"><aside style="display:none;" class="box success_box"><div></div><div><p><Thank>You!</Thank><br/><Your>message has been sent successfully.</Your></p></div></aside><script type="text/javascript">jQuery(document).ready(function () {
+	jQuery('#form_appointments_803620507476562800').validationEngine('init');
+	jQuery('#form_appointments_803620507476562800 a#appointments_803620507476562800_formsend').click(function () {
+		jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 1 } , 250);
+		if (jQuery('#form_appointments_803620507476562800').validationEngine('validate')) {
+			jQuery.post('php/sendmail.php', {
+				field_572675772111505200 : jQuery('#field_572675772111505200').val(),
+				field_949145697999680900 : jQuery('#field_949145697999680900').val(),
+				name_appointments_803620507476562800_779260444482677900 : jQuery('#name_appointments_803620507476562800_779260444482677900').val(),
+				field_427831627913537800 : jQuery('#field_427831627913537800').val(),
+				field_609916403233180000 : jQuery('#field_609916403233180000').val(),
+				field_241431204693567600 : jQuery('#field_241431204693567600').val(),
+				field_200661433365438530 : jQuery('#field_200661433365438530').val(),
+				field_947959406495958000 : jQuery('input[name=\'field_947959406495958000\']:checked').val(),
+				field_674772244166279300 : jQuery('#field_674772244166279300').val(),
+				contactemail : 'YXBwb2ludG1lbnRzXzgwMzYyMDUwNzQ3NjU2MjgwMHx0ZXN0QHRlc3QuY29tfGFwcG9pbnRtZW50c184MDM2MjA1MDc0NzY1NjI4MDA=',
+				formname : 'appointments_803620507476562800'
+			}, function (data) {
+				jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 0 } , 250);
+				jQuery('#form_appointments_803620507476562800').fadeOut('slow');
+				document.getElementById('form_appointments_803620507476562800').reset();
+				jQuery('#form_appointments_803620507476562800').parent().find('.box').hide();
+				jQuery('#form_appointments_803620507476562800').parent().find('.success_box').fadeIn('fast');
+				jQuery('html, body').animate( { scrollTop : jQuery('#form_appointments_803620507476562800').offset().top - 140 } , 'slow');
+				jQuery('#form_appointments_803620507476562800').parent().find('.success_box').delay(5000).fadeOut(1000, function () {
+					jQuery('#form_appointments_803620507476562800').fadeIn('slow');
+				} );
+			} );
+			return false;
+		} else {
+			jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 0 } , 250);
+			return false;
+		}
+	} );
+} );
+</script><form id="form_appointments_803620507476562800" action="#" method="post"><div class="form_info">cmsms_select<label>Select Department</label><div class="form_field_wrap"><select id="field_572675772111505200" name="field_572675772111505200"><option value="Pediatric Clinic">Pediatric Clinic</option><option value="Diagnosis Clinic">Diagnosis Clinic</option><option value="Cardiac Clinic">Cardiac Clinic</option><option value="Medical Pharmacy">Medical Pharmacy</option><option value="Family Doctor">Family Doctor</option><option value="Rehabilitation Therapy">Rehabilitation Therapy</option><option value="Laryngological Clinic">Laryngological Clinic</option></select></div><div class="cl"></div></div><div class="form_info cmsms_input"><label for="field_949145697999680900">First Name</label><div class="form_field_wrap"><input id="field_949145697999680900" type="text" name="field_949145697999680900" value=""/></div></div><div class="form_info cmsms_input"><label for="name_appointments_803620507476562800_779260444482677900">Last Name</label><div class="form_field_wrap"><input id="name_appointments_803620507476562800_779260444482677900" type="text" name="name_appointments_803620507476562800_779260444482677900" value=""/></div></div><div class="form_info cmsms_input"><label for="field_427831627913537800">Your Phone</label><div class="form_field_wrap"><input id="field_427831627913537800" type="text" name="field_427831627913537800" value=""/></div></div><div class="form_info cmsms_input"><label for="field_609916403233180000">Your Email</label><div class="form_field_wrap"><input id="field_609916403233180000" type="text" name="field_609916403233180000" value=""/></div></div><div class="form_info cmsms_input"><label for="field_241431204693567600">Appointment Date</label><div class="form_field_wrap"><input id="field_241431204693567600" type="text" name="field_241431204693567600" value=""/></div></div><div class="form_info cmsms_input"><label for="field_200661433365438530">Date of Birth</label><div class="form_field_wrap"><input id="field_200661433365438530" type="text" name="field_200661433365438530" value=""/></div></div><div class="form_info cmsms_radio"><label>Sex</label><div class="check_parent"><input id="field_9479594064959580001" type="radio" name="field_947959406495958000" value="Male" checked="checked"/><label for="field_9479594064959580001">Male</label></div><div class="cl"></div><div class="check_parent"><input id="field_9479594064959580002" type="radio" name="field_947959406495958000" value="Female"/><label for="field_9479594064959580002">Female</label></div><div class="cl"></div><div class="check_parent"><input id="field_9479594064959580003" type="radio" name="field_947959406495958000" value="Child"/><label for="field_9479594064959580003">Child</label></div><div class="cl"></div></div><div class="cl"></div><div class="cl"></div><div class="form_info cmsms_textarea"><label for="field_674772244166279300">Your Message</label><div class="form_field_wrap"><textarea id="field_674772244166279300" name="field_674772244166279300" cols="58" rows="6"></textarea></div></div><div class="cl"></div><div class="loading"></div><div class="cl"></div><div class="fl"><a id="appointments_803620507476562800_formsend" href="#" class="button_small">Send Message</a></div><div class="cl"></div></form></div></div></div></div></section><!-- _________________________ Finish Content _________________________--><!-- _________________________ Start Sidebar _________________________--><aydeke-sidebar></aydeke-sidebar><!-- _________________________ Finish Sidebar _________________________--><div class="cl"></div></div></section><!-- _________________________ Finish Middle _________________________-->

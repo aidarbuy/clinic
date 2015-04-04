@@ -1,0 +1,143 @@
+// _________________________ Start Middle _________________________
+section#middle
+	.headline
+	h1 Contacts
+
+	.cmsms_breadcrumbs
+		a.cms_home(ui-sref="main") Home
+		span.breadcrumbs_sep &nbsp;/&nbsp;
+		span Contacts
+
+	.content_wrap.r_sidebar
+		// _________________________ Start Content _________________________
+		section#content(role="main")
+			.entry
+				.cmsms_cc
+					.one_first.first_column
+						asdfasdff
+						.resizable_block
+							style.
+								.angular-google-map-container { height: 400px; }
+							ui-gmap-google-map(center="map.center" zoom="map.zoom" draggable="true" options="options")
+								ui-gmap-marker(coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id")
+
+						// script(type="text/javascript")
+							// jQuery(document).ready(function () {
+							    //- jQuery("#google_map_53576f8a1181e").gMap({
+							    //-     markers: [{
+							    //-         address: "London, United Kingdom",
+							    //-         html: "Visit us!",
+							    //-         popup: false
+							    //-     }],
+							    //-     zoom: 14,
+							    //-     maptype: google.maps.MapTypeId.ROADMAP,
+							    //-     scrollwheel: true,
+							    //-     mapTypeControl: true,
+							    //-     zoomControl: true,
+							    //-     panControl: true,
+							    //-     scaleControl: true,
+							    //-     streetViewControl: true
+							    //- });
+							//- });
+
+					.one_first.first_column
+						.cl
+						
+					.one_first.first_column
+						.cmsms-form-builder
+							aside.box.success_box(style="display:none;")
+								div
+									div
+									div
+										p
+											Thank You!
+											br
+											Your message has been sent successfully.
+							//- script(type="text/javascript").
+							//- 	jQuery(document).ready(function () {
+							//- 		jQuery('#form_contacts_821698888378616800').validationEngine('init');
+							//- 		jQuery('#form_contacts_821698888378616800 a#contacts_821698888378616800_formsend').click(function () {
+							//- 			jQuery('#form_contacts_821698888378616800 .loading').animate( { opacity : 1 } , 250);
+							//- 			if (jQuery('#form_contacts_821698888378616800').validationEngine('validate')) {
+							//- 				jQuery.post('php/sendmail.php', {
+							//- 					field_59177913141667540: jQuery('#field_59177913141667540').val(),
+							//- 					name_contacts_821698888378616800_697396431272861200: jQuery('#name_contacts_821698888378616800_697396431272861200').val(),
+							//- 					field_43973222418702936: jQuery('#field_43973222418702936').val(),
+							//- 					field_619607586107771500: jQuery('#field_619607586107771500').val(),
+							//- 					field_344203287173695550: jQuery('#field_344203287173695550').val(),
+							//- 					contactemail: 'Y29udGFjdHNfODIxNjk4ODg4Mzc4NjE2ODAwfHRlc3RAdGVzdC5jb218Y29udGFjdHNfODIxNjk4ODg4Mzc4NjE2ODAw',
+							//- 					formname: 'contacts_821698888378616800'
+							//- 				}, function (data) {
+							//- 					jQuery('#form_contacts_821698888378616800 .loading').animate( { opacity : 0 } , 250);
+							//- 					jQuery('#form_contacts_821698888378616800').fadeOut('slow');
+							//- 					document.getElementById('form_contacts_821698888378616800').reset();
+							//- 					jQuery('#form_contacts_821698888378616800').parent().find('.box').hide();
+							//- 					jQuery('#form_contacts_821698888378616800').parent().find('.success_box').fadeIn('fast');
+							//- 					jQuery('html, body').animate( { scrollTop : jQuery('#form_contacts_821698888378616800').offset().top - 140 } , 'slow');
+							//- 					jQuery('#form_contacts_821698888378616800').parent().find('.success_box').delay(5000).fadeOut(1000, function () {
+							//- 						jQuery('#form_contacts_821698888378616800').fadeIn('slow');
+							//- 					} );
+							//- 				} );
+							//- 				return false;
+							//- 			} else {
+							//- 				jQuery('#form_contacts_821698888378616800 .loading').animate( { opacity : 0 } , 250);
+							//- 				return false;
+							//- 			}
+							//- 		} );
+							//- 	} );
+
+							form#form_contacts_821698888378616800(action="#" method="post")
+								.form_info.cmsms_input
+									label(for="field_59177913141667540")
+										Name
+										span.color_3 *
+
+									.form_field_wrap
+										input#field_59177913141667540(type="text" name="field_59177913141667540" value="")
+
+								.form_info.cmsms_input
+									label(for="name_contacts_821698888378616800_697396431272861200")
+										Mail
+										span.color_3 *
+
+									.form_field_wrap
+										input#name_contacts_821698888378616800_697396431272861200(type="text" name="name_contacts_821698888378616800_697396431272861200" value="")
+
+									span.db will not be published
+
+								.form_info.cmsms_input
+									label(for="field_43973222418702936") Website
+									.form_field_wrap
+										input#field_43973222418702936(type="text" name="field_43973222418702936" value="")
+
+								.form_info.cmsms_input
+									label(for="field_619607586107771500")
+										Subject
+										span.color_3 *
+
+									.form_field_wrap
+										input#field_619607586107771500(type="text" name="field_619607586107771500" value="")
+
+								.cl
+								.form_info.cmsms_textarea
+									label(for="field_344203287173695550") Message
+									.form_field_wrap
+										textarea#field_344203287173695550(name="field_344203287173695550" cols="58" rows="6")
+
+								.cl
+								.loading
+								.cl
+								.fl
+									a#contacts_821698888378616800_formsend.button_small(href="#") Send Message
+
+								.fl(style="padding:0 0 0 10px;")
+									a#contacts_821698888378616800_formclear.button_small(href="#" onclick="if (confirm('Do you really want to reset the form?')) document.getElementById('form_contacts_821698888378616800').reset(); return false;") Reset
+
+								.cl
+		// _________________________ Finish Content _________________________
+
+		// _________________________ Start Sidebar _________________________
+		sidebar
+		// _________________________ Finish Sidebar _________________________
+		.cl
+// _________________________ Finish Middle _________________________

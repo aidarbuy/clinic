@@ -1,0 +1,149 @@
+// _________________________ Start Middle _________________________
+section#middle
+	.headline
+	h1 Appointments
+
+	.cmsms_breadcrumbs
+		a.cms_home(href="index.html") Home
+		span.breadcrumbs_sep &nbsp;/&nbsp;
+		span Appointments
+
+	.content_wrap.r_sidebar
+
+		// _________________________ Start Content _________________________
+		section#content(role="main")
+			.entry
+				.cmsms_cc
+					.one_first.first_column
+						.cmsms-form-builder
+							aside.box.success_box(style="display:none;")
+
+									div
+									div
+										p
+											Thank You!
+											br
+											Your message has been sent successfully.
+							script(type="text/javascript").
+								jQuery(document).ready(function () {
+									jQuery('#form_appointments_803620507476562800').validationEngine('init');
+									jQuery('#form_appointments_803620507476562800 a#appointments_803620507476562800_formsend').click(function () {
+										jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 1 } , 250);
+										if (jQuery('#form_appointments_803620507476562800').validationEngine('validate')) {
+											jQuery.post('php/sendmail.php', {
+												field_572675772111505200 : jQuery('#field_572675772111505200').val(),
+												field_949145697999680900 : jQuery('#field_949145697999680900').val(),
+												name_appointments_803620507476562800_779260444482677900 : jQuery('#name_appointments_803620507476562800_779260444482677900').val(),
+												field_427831627913537800 : jQuery('#field_427831627913537800').val(),
+												field_609916403233180000 : jQuery('#field_609916403233180000').val(),
+												field_241431204693567600 : jQuery('#field_241431204693567600').val(),
+												field_200661433365438530 : jQuery('#field_200661433365438530').val(),
+												field_947959406495958000 : jQuery('input[name=\'field_947959406495958000\']:checked').val(),
+												field_674772244166279300 : jQuery('#field_674772244166279300').val(),
+												contactemail : 'YXBwb2ludG1lbnRzXzgwMzYyMDUwNzQ3NjU2MjgwMHx0ZXN0QHRlc3QuY29tfGFwcG9pbnRtZW50c184MDM2MjA1MDc0NzY1NjI4MDA=',
+												formname : 'appointments_803620507476562800'
+											}, function (data) {
+												jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 0 } , 250);
+												jQuery('#form_appointments_803620507476562800').fadeOut('slow');
+												document.getElementById('form_appointments_803620507476562800').reset();
+												jQuery('#form_appointments_803620507476562800').parent().find('.box').hide();
+												jQuery('#form_appointments_803620507476562800').parent().find('.success_box').fadeIn('fast');
+												jQuery('html, body').animate( { scrollTop : jQuery('#form_appointments_803620507476562800').offset().top - 140 } , 'slow');
+												jQuery('#form_appointments_803620507476562800').parent().find('.success_box').delay(5000).fadeOut(1000, function () {
+													jQuery('#form_appointments_803620507476562800').fadeIn('slow');
+												} );
+											} );
+											return false;
+										} else {
+											jQuery('#form_appointments_803620507476562800 .loading').animate( { opacity : 0 } , 250);
+											return false;
+										}
+									} );
+								} );
+
+							form#form_appointments_803620507476562800(action="#" method="post")
+								.form_info cmsms_select
+									label Select Department
+									.form_field_wrap
+										select#field_572675772111505200(name="field_572675772111505200")
+											option(value="Pediatric Clinic") Pediatric Clinic
+											option(value="Diagnosis Clinic") Diagnosis Clinic
+											option(value="Cardiac Clinic") Cardiac Clinic
+											option(value="Medical Pharmacy") Medical Pharmacy
+											option(value="Family Doctor") Family Doctor
+											option(value="Rehabilitation Therapy") Rehabilitation Therapy
+											option(value="Laryngological Clinic") Laryngological Clinic
+
+									.cl
+
+								.form_info.cmsms_input
+									label(for="field_949145697999680900") First Name
+									.form_field_wrap
+										input#field_949145697999680900(type="text" name="field_949145697999680900" value="")
+
+								.form_info.cmsms_input
+									label(for="name_appointments_803620507476562800_779260444482677900") Last Name
+									.form_field_wrap
+										input#name_appointments_803620507476562800_779260444482677900(type="text" name="name_appointments_803620507476562800_779260444482677900" value="")
+
+								.form_info.cmsms_input
+									label(for="field_427831627913537800") Your Phone
+									.form_field_wrap
+										input#field_427831627913537800(type="text" name="field_427831627913537800" value="")
+
+								.form_info.cmsms_input
+									label(for="field_609916403233180000") Your Email
+									.form_field_wrap
+										input#field_609916403233180000(type="text" name="field_609916403233180000" value="")
+
+								.form_info.cmsms_input
+									label(for="field_241431204693567600") Appointment Date
+									.form_field_wrap
+										input#field_241431204693567600(type="text" name="field_241431204693567600" value="")
+
+								.form_info.cmsms_input
+									label(for="field_200661433365438530") Date of Birth
+									.form_field_wrap
+										input#field_200661433365438530(type="text" name="field_200661433365438530" value="")
+
+								.form_info.cmsms_radio
+									label Sex
+									.check_parent
+										input#field_9479594064959580001(type="radio" name="field_947959406495958000" value="Male" checked="checked")
+										label(for="field_9479594064959580001") Male
+
+									.cl
+									.check_parent
+										input#field_9479594064959580002(type="radio" name="field_947959406495958000" value="Female")
+										label(for="field_9479594064959580002") Female
+
+									.cl
+									.check_parent
+										input#field_9479594064959580003(type="radio" name="field_947959406495958000" value="Child")
+										label(for="field_9479594064959580003") Child
+
+									.cl
+
+								.cl
+
+								.cl
+								.form_info.cmsms_textarea
+									label(for="field_674772244166279300") Your Message
+									.form_field_wrap
+										textarea#field_674772244166279300(name="field_674772244166279300" cols="58" rows="6")
+
+								.cl
+
+								.loading
+								.cl
+								.fl
+									a#appointments_803620507476562800_formsend.button_small(href="#") Send Message
+
+								.cl
+		// _________________________ Finish Content _________________________
+
+		// _________________________ Start Sidebar _________________________
+		aydeke-sidebar
+		// _________________________ Finish Sidebar _________________________
+		.cl
+// _________________________ Finish Middle _________________________

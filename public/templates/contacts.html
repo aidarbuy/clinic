@@ -1,162 +1,18 @@
-<!-- _________________________ Start Middle _________________________ -->
-<section id="middle">
-	<div class="headline">
-	<h1>Contacts</h1>
-	</div>
-	<div class="cmsms_breadcrumbs">
-		<a ui-sref="main" class="cms_home">Home</a>
-		<span class="breadcrumbs_sep"> / </span>
-		<span>Contacts</span>
-	</div>
-	<div class="content_wrap r_sidebar">
-
-		<!--_________________________ Start Content _________________________ -->
-		<section id="content" role="main">
-			<div class="entry">
-				<div class="cmsms_cc">
-					<div class="one_first first_column">
-						<div class="resizable_block">
-							<style>.angular-google-map-container { height: 400px; }</style>
-							<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
-								<ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
-								</ui-gmap-marker>
-							</ui-gmap-google-map>
-
-						</div>
-						<!-- // <script type="text/javascript"> -->
-							<!-- jQuery(document).ready(function () {
-							    jQuery("#google_map_53576f8a1181e").gMap({
-							        markers: [{
-							            address: "London, United Kingdom",
-							            html: "Visit us!",
-							            popup: false
-							        }],
-							        zoom: 14,
-							        maptype: google.maps.MapTypeId.ROADMAP,
-							        scrollwheel: true,
-							        mapTypeControl: true,
-							        zoomControl: true,
-							        panControl: true,
-							        scaleControl: true,
-							        streetViewControl: true
-							    });
-							}); -->
-						<!-- </script> -->
-					</div>
-					<div class="one_first first_column">
-						<div class="cl"></div>
-					</div>
-					<div class="one_first first_column">
-						<div class="cmsms-form-builder">
-							<aside class="box success_box" style="display:none;">
-								<div>
-									<div></div>
-									<div>
-										<p>
-											Thank You!
-											<br />
-											Your message has been sent successfully.
-										</p>
-									</div>
-								</div>
-							</aside>
-							<script type="text/javascript">
-								jQuery(document).ready(function () {
-									jQuery('#form_contacts_821698888378616800').validationEngine('init');
-									jQuery('#form_contacts_821698888378616800 a#contacts_821698888378616800_formsend').click(function () {
-										jQuery('#form_contacts_821698888378616800 .loading').animate( { opacity : 1 } , 250);
-										if (jQuery('#form_contacts_821698888378616800').validationEngine('validate')) {
-											jQuery.post('php/sendmail.php', {
-												field_59177913141667540 : jQuery('#field_59177913141667540').val(),
-												name_contacts_821698888378616800_697396431272861200 : jQuery('#name_contacts_821698888378616800_697396431272861200').val(),
-												field_43973222418702936 : jQuery('#field_43973222418702936').val(),
-												field_619607586107771500 : jQuery('#field_619607586107771500').val(),
-												field_344203287173695550 : jQuery('#field_344203287173695550').val(),
-												contactemail : 'Y29udGFjdHNfODIxNjk4ODg4Mzc4NjE2ODAwfHRlc3RAdGVzdC5jb218Y29udGFjdHNfODIxNjk4ODg4Mzc4NjE2ODAw',
-												formname : 'contacts_821698888378616800'
-											}, function (data) {
-												jQuery('#form_contacts_821698888378616800 .loading').animate( { opacity : 0 } , 250);
-												jQuery('#form_contacts_821698888378616800').fadeOut('slow');
-												document.getElementById('form_contacts_821698888378616800').reset();
-												jQuery('#form_contacts_821698888378616800').parent().find('.box').hide();
-												jQuery('#form_contacts_821698888378616800').parent().find('.success_box').fadeIn('fast');
-												jQuery('html, body').animate( { scrollTop : jQuery('#form_contacts_821698888378616800').offset().top - 140 } , 'slow');
-												jQuery('#form_contacts_821698888378616800').parent().find('.success_box').delay(5000).fadeOut(1000, function () {
-													jQuery('#form_contacts_821698888378616800').fadeIn('slow');
-												} );
-											} );
-											return false;
-										} else {
-											jQuery('#form_contacts_821698888378616800 .loading').animate( { opacity : 0 } , 250);
-											return false;
-										}
-									} );
-								} );
-							</script>
-							<form action="#" method="post" id="form_contacts_821698888378616800">
-								<div class="form_info cmsms_input">
-									<label for="field_59177913141667540">
-										Name
-										<span class="color_3">*</span>
-									</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_59177913141667540" id="field_59177913141667540" value="" class="validate[required,minSize[3],custom[onlyLetterSp]]" />
-									</div>
-								</div>
-								<div class="form_info cmsms_input">
-									<label for="name_contacts_821698888378616800_697396431272861200">
-										Mail
-										<span class="color_3">*</span>
-									</label>
-									<div class="form_field_wrap">
-										<input type="text" name="name_contacts_821698888378616800_697396431272861200" id="name_contacts_821698888378616800_697396431272861200" value="" class="validate[required,custom[email]]" />
-									</div>
-									<span class="db">will not be published</span>
-								</div>
-								<div class="form_info cmsms_input">
-									<label for="field_43973222418702936">Website</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_43973222418702936" id="field_43973222418702936" value="" />
-									</div>
-								</div>
-								<div class="form_info cmsms_input">
-									<label for="field_619607586107771500">
-										Subject
-										<span class="color_3">*</span>
-									</label>
-									<div class="form_field_wrap">
-										<input type="text" name="field_619607586107771500" id="field_619607586107771500" value="" class="validate[required,minSize[3],maxSize[100]]" />
-									</div>
-								</div>
-								<div class="cl"></div>
-								<div class="form_info cmsms_textarea">
-									<label for="field_344203287173695550">Message</label>
-									<div class="form_field_wrap">
-										<textarea name="field_344203287173695550" id="field_344203287173695550" cols="58" rows="6" class="validate[minSize[10]]"></textarea>
-									</div>
-								</div>
-								<div class="cl"></div>
-								<div class="loading"></div>
-								<div class="cl"></div>
-								<div class="fl">
-									<a id="contacts_821698888378616800_formsend" class="button_small" href="#">Send Message</a>
-								</div>
-								<div class="fl" style="padding:0 0 0 10px;">
-									<a id="contacts_821698888378616800_formclear" class="button_small" href="#" onclick="if (confirm('Do you really want to reset the form?')) document.getElementById('form_contacts_821698888378616800').reset(); return false;">Reset</a>
-								</div>
-								<div class="cl"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- _________________________ Finish Content _________________________ -->
-
-		<!-- _________________________ Start Sidebar _________________________ -->
-		<div sidebar></div>
-		<!-- _________________________ Finish Sidebar _________________________ -->
-		<div class="cl"></div>
-	</div>
-</section>
-<!-- _________________________ Finish Middle _________________________ -->
+<!-- _________________________ Start Middle _________________________--><section id="middle"><div class="headline"></div><h1>Contacts</h1><div class="cmsms_breadcrumbs"><a ui-sref="main" class="cms_home">Home</a><span class="breadcrumbs_sep">&nbsp;/&nbsp;</span><span>Contacts</span></div><div class="content_wrap r_sidebar"><!-- _________________________ Start Content _________________________--><section id="content" role="main"><div class="entry"><div class="cmsms_cc"><div class="one_first first_column"><asdfasdff></asdfasdff><div class="resizable_block"><style>.angular-google-map-container { height: 400px; }</style><ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options"><ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id"></ui-gmap-marker></ui-gmap-google-map></div><!-- script(type="text/javascript")// jQuery(document).ready(function () {
+    //- jQuery("#google_map_53576f8a1181e").gMap({
+    //-     markers: [{
+    //-         address: "London, United Kingdom",
+    //-         html: "Visit us!",
+    //-         popup: false
+    //-     }],
+    //-     zoom: 14,
+    //-     maptype: google.maps.MapTypeId.ROADMAP,
+    //-     scrollwheel: true,
+    //-     mapTypeControl: true,
+    //-     zoomControl: true,
+    //-     panControl: true,
+    //-     scaleControl: true,
+    //-     streetViewControl: true
+    //- });
+//- });
+--></div><div class="one_first first_column"><div class="cl"></div></div><div class="one_first first_column"><div class="cmsms-form-builder"><aside style="display:none;" class="box success_box"><div><div></div><div><p><Thank>You!</Thank><br/><Your>message has been sent successfully.</Your></p></div></div></aside><form id="form_contacts_821698888378616800" action="#" method="post"><div class="form_info cmsms_input"><label for="field_59177913141667540"><Name></Name><span class="color_3">*</span></label><div class="form_field_wrap"><input id="field_59177913141667540" type="text" name="field_59177913141667540" value=""/></div></div><div class="form_info cmsms_input"><label for="name_contacts_821698888378616800_697396431272861200"><Mail></Mail><span class="color_3">*</span></label><div class="form_field_wrap"><input id="name_contacts_821698888378616800_697396431272861200" type="text" name="name_contacts_821698888378616800_697396431272861200" value=""/></div><span class="db">will not be published</span></div><div class="form_info cmsms_input"><label for="field_43973222418702936">Website</label><div class="form_field_wrap"><input id="field_43973222418702936" type="text" name="field_43973222418702936" value=""/></div></div><div class="form_info cmsms_input"><label for="field_619607586107771500"><Subject></Subject><span class="color_3">*</span></label><div class="form_field_wrap"><input id="field_619607586107771500" type="text" name="field_619607586107771500" value=""/></div></div><div class="cl"></div><div class="form_info cmsms_textarea"><label for="field_344203287173695550">Message</label><div class="form_field_wrap"><textarea id="field_344203287173695550" name="field_344203287173695550" cols="58" rows="6"></textarea></div></div><div class="cl"></div><div class="loading"></div><div class="cl"></div><div class="fl"><a id="contacts_821698888378616800_formsend" href="#" class="button_small">Send Message</a></div><div style="padding:0 0 0 10px;" class="fl"><a id="contacts_821698888378616800_formclear" href="#" onclick="if (confirm('Do you really want to reset the form?')) document.getElementById('form_contacts_821698888378616800').reset(); return false;" class="button_small">Reset</a></div><div class="cl"></div></form></div></div></div></div></section><!-- _________________________ Finish Content _________________________--><!-- _________________________ Start Sidebar _________________________--><sidebar></sidebar><!-- _________________________ Finish Sidebar _________________________--><div class="cl"></div></div></section><!-- _________________________ Finish Middle _________________________-->

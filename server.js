@@ -18,9 +18,9 @@ doctorsData.connectDB(serverURL)
 // Express
 var eapp = express();
 eapp.use(express["static"](__dirname + '/public'))
-//	.use(bodyParser.json())
-	.set('views', __dirname);
-//	.set('view engine', 'jade');
+	.use(bodyParser.json())
+	.set('views', __dirname)
+	.set('view engine', 'jade');
 
 // Routes
 eapp.get('/api/doctors', function(req, res) {
@@ -41,7 +41,7 @@ eapp.get('/api/doctors', function(req, res) {
 		});
 	})
 	.get('*', function(req, res) {
-		 return res.sendFile(__dirname + '/index.html');
+		 return res.render(__dirname + '/index');
 	});
 
 // Server

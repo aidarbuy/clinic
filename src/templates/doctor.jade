@@ -1,0 +1,371 @@
+// _________________________ Start Middle _________________________
+section#middle.services_page
+
+	.headline
+		h1 {{doctor.firstname}} {{doctor.lastname}} {{doctor.title}}
+
+	.cmsms_breadcrumbs
+		a.cms_home(ui-sref="main") Home
+		span.breadcrumbs_sep &nbsp;/&nbsp;
+		span {{doctor.firstname}} {{doctor.lastname}} {{doctor.title}}
+
+	.content_wrap.service_page
+		// _________________________ Start Content _________________________
+		section#middle_content(role="main")
+			.entry
+				section.opened-article
+
+					// _________________________ Start Album Service _________________________
+					article.service.type-service.status-publish.hentry.format-album.cmsms_one
+						.service_content.with_s_side_bar
+							.resize
+								figure
+									a.preloade.highImg.jackbox(href="{{doctor.imageLarge}}" data-group="img_5906" title="{{doctor.title}} {{doctor.firstname}} {{doctor.lastname}}")
+										img.fullwidth(width="820" height="465" src="{{doctor.imageLarge}}" alt="{{doctor.title}} {{doctor.firstname}} {{doctor.lastname}}" title="{{ doctor.title}} {{doctor.firstname}} {{doctor.lastname}}")
+								.cl
+
+							.entry-content
+								.cmsms_cc
+									.one_first.first_column
+										.wrap_social_icons
+											ul.social_icons
+												li
+													a(title="#" href="#" target="_blank")
+														img(alt="#" src="images/img/facebook.png")
+												li
+													a(title="#" href="#" target="_blank")
+														img(alt="#" src="images/img/twitter.png")
+												li
+													a(title="#" href="#" target="_blank")
+														img(alt="#" src="images/img/rss.png")
+												li
+													a(title="#" href="#" target="_blank")
+														img(alt="#" src="images/img/linkedin.png")
+												li
+													a(title="#" href="#" target="_blank")
+														img(alt="#" src="images/img/skype.png")
+											.cl
+										br
+										// Lorem ipsum dolor sit amet, cnsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										// Doctor Beckwith worked as an emergency room physician since 2008, and as such she is acustomed to see very sick people and children
+										h4
+											p Hi, I'm doctor {{doctor.firstname}} {{doctor.lastname}}!
+											p {{doctor.description}}
+
+									.one_first.first_column
+										.cl
+
+									.one_first.first_column
+										h3 Appointment Request
+
+									.one_first.first_column
+										.cmsms-form-builder
+											aside.box.success_box(style="display:none;")
+												div
+													div
+													div
+														p Thank You!
+															br
+															Your message has been sent successfully.
+
+											script(type="text/javascript").
+												// jQuery(document).ready(function () {
+												// 	jQuery('#form_test_contact_form_760373284202473500').validationEngine('init');
+												// 	jQuery('#form_test_contact_form_760373284202473500 a#test_contact_form_760373284202473500_formsend').click(function () {
+												// 		jQuery('#form_test_contact_form_760373284202473500 .loading').animate( { opacity : 1 } , 250);
+												// 		if (jQuery('#form_test_contact_form_760373284202473500').validationEngine('validate')) {
+												// 			jQuery.post('php/sendmail.php', {
+												// 				field_897900708169259500 : jQuery('#field_897900708169259500').val(),
+												// 				name_test_contact_form_760373284202473500_904291485900320000 : jQuery('#name_test_contact_form_760373284202473500_904291485900320000').val(),
+												// 				name_test_contact_form_760373284202473500_250315843259674500 : jQuery('#name_test_contact_form_760373284202473500_250315843259674500').val(),
+												// 				name_test_contact_form_760373284202473500_71395285589975210 : jQuery('#name_test_contact_form_760373284202473500_71395285589975210').val(),
+												// 				name_test_contact_form_760373284202473500_202610687113029220 : jQuery('#name_test_contact_form_760373284202473500_202610687113029220').val(),
+												// 				name_test_contact_form_760373284202473500_363333091577736640 : jQuery('#name_test_contact_form_760373284202473500_363333091577736640').val(),
+												// 				contactemail : 'dGVzdF9jb250YWN0X2Zvcm1fNzYwMzczMjg0MjAyNDczNTAwfHRlc3RAdGVzdC5jb218dGVzdF9jb250YWN0X2Zvcm1fNzYwMzczMjg0MjAyNDczNTAw',
+												// 				formname : 'test_contact_form_760373284202473500'
+												// 			}, function (data) {
+												// 				jQuery('#form_test_contact_form_760373284202473500 .loading').animate( { opacity : 0 } , 250);
+												// 				jQuery('#form_test_contact_form_760373284202473500').fadeOut('slow');
+												// 				document.getElementById('form_test_contact_form_760373284202473500').reset();
+												// 				jQuery('#form_test_contact_form_760373284202473500').parent().find('.box').hide();
+												// 				jQuery('#form_test_contact_form_760373284202473500').parent().find('.success_box').fadeIn('fast');
+												// 				jQuery('html, body').animate( { scrollTop : jQuery('#form_test_contact_form_760373284202473500').offset().top - 140 } , 'slow');
+												// 				jQuery('#form_test_contact_form_760373284202473500').parent().find('.success_box').delay(5000).fadeOut(1000, function () {
+												// 					jQuery('#form_test_contact_form_760373284202473500').fadeIn('slow');
+												// 				} );
+												// 			} );
+												// 			return false;
+												// 		} else {
+												// 			jQuery('#form_test_contact_form_760373284202473500 .loading').animate( { opacity : 0 } , 250);
+												// 			return false;
+												// 		}
+												// 	} );
+												// } );
+
+											form#form_test_contact_form_760373284202473500(action="#" method="post")
+												.form_info.cmsms_select
+													label Select Department
+													.form_field_wrap
+														select#field_897900708169259500(name="field_897900708169259500")
+															option(value="Pediatric Clinic") Pediatric Clinic
+															option(value="Diagnosis Clinic") Diagnosis Clinic
+															option(value="Cardiac Clinic") Cardiac Clinic
+															option(value="Medical Pharmacy") Medical Pharmacy
+															option(value="Family Doctor") Family Doctor
+															option(value="Rehabilitation Therapy") Rehabilitation Therapy
+															option(value="Laryngological Clinic") Laryngological Clinic
+
+													.cl
+
+												.form_info.cmsms_input
+													label(for="name_test_contact_form_760373284202473500_904291485900320000") First Name
+													.form_field_wrap
+														input#name_test_contact_form_760373284202473500_904291485900320000(type="text" name="name_test_contact_form_760373284202473500_904291485900320000" value="")
+
+												.form_info.cmsms_input
+													label(for="name_test_contact_form_760373284202473500_250315843259674500") Last Name
+													.form_field_wrap
+														input#name_test_contact_form_760373284202473500_250315843259674500(type="text" name="name_test_contact_form_760373284202473500_250315843259674500" value="")
+
+												.form_info.cmsms_input
+													label(for="name_test_contact_form_760373284202473500_71395285589975210") Your Phone
+													.form_field_wrap
+														input#name_test_contact_form_760373284202473500_71395285589975210(type="text" name="name_test_contact_form_760373284202473500_71395285589975210" value="")
+
+												.form_info.cmsms_input
+													label(for="name_test_contact_form_760373284202473500_202610687113029220") Your Email
+													.form_field_wrap
+														input#name_test_contact_form_760373284202473500_202610687113029220(type="text" name="name_test_contact_form_760373284202473500_202610687113029220" value="")
+
+												.form_info.cmsms_input
+													label(for="name_test_contact_form_760373284202473500_363333091577736640") Appointment Date
+													.form_field_wrap
+														input#name_test_contact_form_760373284202473500_363333091577736640(type="text" name="name_test_contact_form_760373284202473500_363333091577736640" value="")
+
+												.loading
+												.cl
+												.fl
+													a#test_contact_form_760373284202473500_formsend.button_small(href="#") Send Message
+
+												.cl
+
+						footer.entry-meta.service_sidebar
+							.cmsms_features
+								h3 Information
+								.cmsms_features_item
+									span.cmsms_features_item_title Speciality
+									span.cmsms_features_item_desc {{doctor.speciality}}
+
+								.cmsms_features_item
+									span.cmsms_features_item_title Title
+									span.cmsms_features_item_desc {{doctor.degree}}
+
+								.cmsms_features_item
+									span.cmsms_features_item_title Education
+									span.cmsms_features_item_desc {{doctor.education}}
+
+								.cmsms_features_item
+									span.cmsms_features_item_title Phone
+									span.cmsms_features_item_desc (703) 687-4158
+
+								.cmsms_features_item
+									span.cmsms_features_item_title Email
+									span.cmsms_features_item_desc {{doctor.email}}
+
+							.cmsms_features
+								h3 Open Hours
+								.cmsms_features_item
+									span.cmsms_features_item_title Monday - Friday
+									span.cmsms_features_item_desc 10 am to 8 pm
+								.cmsms_features_item
+									span.cmsms_features_item_title Saturday
+									span.cmsms_features_item_desc 10 am to 8 pm
+								.cmsms_features_item
+									span.cmsms_features_item_title Sunday
+									span.cmsms_features_item_desc 10 am to 8 pm
+
+							// .cmsms_features
+								h3 Prices
+								.cmsms_features_item
+									span.cmsms_features_item_title Сonsultation
+									span.cmsms_features_item_desc $50
+								.cmsms_features_item
+									span.cmsms_features_item_title Diagnostics
+									span.cmsms_features_item_desc $110
+								.cmsms_features_item
+									span.cmsms_features_item_title Allergy testing
+									span.cmsms_features_item_desc $80
+
+						.cl
+					// _________________________ Finish Album Service _________________________
+
+					aside.share_posts
+						h3 Like this service?
+
+						.fl
+							a.twitter-share-button(href="https://twitter.com/share" data-lang="en") Tweet
+							script(type="text/javascript").
+								// !function (d, s, id) {
+								// 	var js = undefined,
+								// 		fjs = d.getElementsByTagName(s)[0];
+								//
+								// 	if (d.getElementById(id)) {
+								// 		d.getElementById(id).parentNode.removeChild(d.getElementById(id));
+								// 	}
+								//
+								// 	js = d.createElement(s);
+								// 	js.id = id;
+								// 	js.src = '//platform.twitter.com/widgets.js';
+								//
+								// 	fjs.parentNode.insertBefore(js, fjs);
+								// } (document, 'script', 'twitter-wjs');
+
+						.fl
+							.g-plusone(data-size="medium")
+							script(type="text/javascript").
+								// (function () {
+								// 	var po = document.createElement('script'),
+								// 		s = document.getElementsByTagName('script')[0];
+								//
+								// 	po.type = 'text/javascript';
+								// 	po.async = true;
+								// 	po.src = 'https://apis.google.com/js/plusone.js';
+								//
+								// 	s.parentNode.insertBefore(po, s);
+								// } )();
+
+						.fl
+							a.pin-it-button(href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fdr-michael-linden.html")
+								img(border="0" src="//assets.pinterest.com/images/PinExt.png" alt="Pinterest" title="Pin It")
+
+							script(type="text/javascript").
+								// (function (d, s, id) {
+								// 	var js = undefined,
+								// 		fjs = d.getElementsByTagName(s)[0];
+								//
+								// 	if (d.getElementById(id)) {
+								// 		d.getElementById(id).parentNode.removeChild(d.getElementById(id));
+								// 	}
+								//
+								// 	js = d.createElement(s);
+								// 	js.id = id;
+								// 	js.src = '//assets.pinterest.com/js/pinit.js';
+								//
+								// 	fjs.parentNode.insertBefore(js, fjs);
+								// } (document, 'script', 'pinterest-wjs'));
+
+						.fl
+							.fb-like(data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="arial")
+							script(type="text/javascript").
+								// (function (d, s, id) {
+								// 	var js = undefined,
+								// 		fjs = d.getElementsByTagName(s)[0];
+								//
+								// 	if (d.getElementById(id)) {
+								// 		d.getElementById(id).parentNode.removeChild(d.getElementById(id));
+								// 	}
+								//
+								// 	js = d.createElement(s);
+								// 	js.id = id;
+								// 	js.src = '//connect.facebook.net/en_US/all.js#xfbml=1';
+								//
+								// 	fjs.parentNode.insertBefore(js, fjs);
+								// } (document, 'script', 'facebook-jssdk'));
+
+						.cl
+						a.cmsms_share.button_small(href="#")
+							span More sharing options
+
+						.cmsms_social.cl
+						br
+						br
+
+					aside.related_posts
+						h3 More services
+						ul
+							li
+								a.current(href="#") Popular
+							li
+								a(href="#") Latest
+
+						.related_posts_content
+							.related_posts_content_tab(style="display:block;")
+								.one_half
+									.rel_post_content
+										figure.alignleft
+											a(href="diagnosis_clinic.html" title="Pediatric Clinic")
+												img.attachment-100x100.wp-post-image(width="100" height="100" src="images/happy-baby-s-150x150.jpg" alt="Pediatric Clinic" title="Pediatric Clinic")
+
+										h6
+											a(href="diagnosis_clinic.html" title="Pediatric Clinic") Pediatric Clinic
+
+								.one_half.last
+									.rel_post_content
+										figure.alignleft
+											a(href="diagnosis_clinic.html" title="Diagnosis Clinic")
+												img.attachment-100x100.wp-post-image(width="100" height="100" src="images/stethoscope-on-clipboard-s-150x150.jpg" alt="Diagnosis Clinic" title="Diagnosis Clinic")
+
+										h6
+											a(href="diagnosis_clinic.html" title="Diagnosis Clinic") Diagnosis Clinic
+
+								.cl
+								.one_half
+									.rel_post_content
+										figure.alignleft
+											a(href="diagnosis_clinic.html" title="Dental Clinic")
+												img.attachment-100x100.wp-post-image(width="100" height="100" src="images/smiling-doctor-with-chin-on-hand-s-150x150.jpg" alt="Dental Clinic" title="Dental Clinic")
+
+										h6
+											a(href="diagnosis_clinic.html" title="Dental Clinic") Dental Clinic
+								.one_half.last
+									.rel_post_content
+										figure.alignleft
+											a(href="diagnosis_clinic.html" title="Laboratory Analysis")
+												img.attachment-100x100.wp-post-image(width="100" height="100" src="images/biochemical-research-s-150x150.jpg" alt="Laboratory Analysis" title="Laboratory Analysis")
+										h6
+											a(href="diagnosis_clinic.html" title="Laboratory Analysis") Laboratory Analysis
+
+								.cl
+
+							.related_posts_content_tab
+								.one_half
+									.rel_post_content
+										figure.alignleft
+											a(href="dr_michael_linden.html" title="Dr. Jack Zerriper")
+												img(width="100" height="100" src="images/successful-physician-s-2-150x150.jpg" alt="Dr. Jack Zerriper" title="Dr. Jack Zerriper")
+
+										h6
+											a(href="dr_michael_linden.html" title="Dr. Jack Zerriper") Dr. Jack Zerriper
+
+								.one_half.last
+									.rel_post_content
+										figure.alignleft
+											a(href="dr_michael_linden.html" title="Dr. Jack Simmons")
+												img(src="images/img/PF-placeholder.jpg" alt="Dr. Jack Simmons" title="Dr. Jack Simmons")
+
+										h6
+											a(href="dr_michael_linden.html" title="Dr. Jack Simmons") Dr. Jack Simmons
+
+								.cl
+								.one_half
+									.rel_post_content
+										figure.alignleft
+											a(href="dr_michael_linden.html" title="Dr. Karen Dawson")
+												img(width="100" height="100" src="images/female-practitioner-s-11-150x150.jpg" alt="Dr. Karen Dawson" title="Dr. Karen Dawson")
+
+										h6
+											a(href="dr_michael_linden.html" title="Dr. Karen Dawson") Dr. Karen Dawson
+
+								.one_half.last
+									.rel_post_content
+										figure.alignleft
+											a(href="diagnosis_clinic.html" title="Pediatric Clinic")
+												img.attachment-100x100.wp-post-image(width="100" height="100" src="images/happy-baby-s-150x150.jpg" alt="Pediatric Clinic" title="Pediatric Clinic")
+
+										h6
+											a(href="diagnosis_clinic.html" title="Pediatric Clinic") Pediatric Clinic
+								.cl
+		// _________________________ Finish Content _________________________
+
+		.cl
+// _________________________ Finish Middle _________________________
